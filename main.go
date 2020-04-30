@@ -24,12 +24,12 @@ func main() {
 
 	for _, website := range websites {
 
-		req, err := http.Get(website)
+		resp, err := http.Get(website)
 		if err != nil {
 			fmt.Println("Error: ", err)
 		}
 
-		fmt.Printf("%s %d %s\n", website, req.StatusCode, http.StatusText(req.StatusCode))
+		fmt.Printf("%s %d %s\n", website, resp.StatusCode, http.StatusText(resp.StatusCode))
 	}
 
 }
