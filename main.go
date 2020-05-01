@@ -27,6 +27,7 @@ func main() {
 		resp, err := http.Get(website)
 		if err != nil {
 			fmt.Println("Error: ", err)
+			return
 		}
 
 		fmt.Printf("%-30s %-10d %-10s\n", website, resp.StatusCode, http.StatusText(resp.StatusCode))
