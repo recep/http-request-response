@@ -17,7 +17,7 @@ func main() {
 	}
 
 	w := string(file)
-	websites := []string(strings.Fields(w))
+	websites := strings.Fields(w)
 
 	fmt.Printf("%-30s %-10s %-10s\n", "Website", "Status", "Status Text")
 	fmt.Println(strings.Repeat("-", 55))
